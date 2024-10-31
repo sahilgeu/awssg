@@ -1,0 +1,29 @@
+
+
+
+
+
+  to_port = 22
+  protocl = "tcp"
+  cidr_blocks = ["0.0.0.0/24]
+}
+
+egress {
+  from_port = 0
+  to_port = 0
+  protocol = "-1"
+  cidr_blocks = ["0.0.0.0/24]
+  
+ }
+ 
+}
+
+
+
+resource "aws_instance_type" {
+ ami = ""
+ instance_type = "t2.micro"
+ security_groups = [aws_security_group.name.id]
+ 
+}
+-- INSERT --                                                  62,2          Bot
